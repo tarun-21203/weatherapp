@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 const Navbar = (props) => {
 
@@ -12,7 +12,7 @@ const Navbar = (props) => {
     const onChange = (e) => {
         setSearch(e.target.value);
     }
-    
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -34,7 +34,7 @@ const Navbar = (props) => {
                     </div>
                 </div>
             </nav>
-        </div>   
+        </div>
     )
 }
 
