@@ -1,21 +1,19 @@
 import { useState } from 'react';
 import './App.css';
-import Navbar from './Components/Navbar';
 import Weather from './Components/Weather';
+import LoadingBar from 'react-top-loading-bar';
 
 function App() {
 
-
-  // To get the data from child (Navbar) component
-  const [search, setSearch] = useState('')
-  const getData = (data) => {
-      setSearch(data);
-  }
+  const [progress, setProgress] = useState(0)
 
   return (
     <div >
-      <Navbar onSubmit={getData} />
-      <Weather search={search}/>
+      <LoadingBar
+        color='#f11946'
+        progress={progress}
+      />
+      <Weather setProgress={setProgress}/>
     </div>
   );
 }
